@@ -1,0 +1,35 @@
+#wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 75% 10%;
+  grid-template-areas:
+    "hd"
+    "mn"
+    "ft";
+}
+
+header {
+  grid-area: hd;
+  border-style: solid;
+  border-color: gray;
+}
+
+main {
+  grid-area: mn;
+  border-style: solid;
+  border-color: gray;
+}
+
+footer {
+  grid-area: ft;
+  border-style: solid;
+  border-color: gray;
+}
+
+#index {
+  margin: 0px;
+  background-image: url("bubble.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
