@@ -14,28 +14,32 @@
   src: url(PlayfairDisplay-VariableFont_wght.ttf);
 }
 
-header {
-  grid-area: hd;
+@font-face {
+  font-family: able;
+  src: url(abel-regular.ttf);
+}
 
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  grid-area: hd;
   color: #e7f1f0;
 }
 
-header h1 {
-  font-size: 2.2rem;
-  text-align: center;
-  font-family: Morden;
-  letter-spacing: 10px;
-
+header p {
+  order: 2;
+  font-family: able;
+  margin-right: 30px;
+  font-size: 18px;
 }
 
 main {
   grid-area: mn;
-
 }
 
 footer {
   grid-area: ft;
-
 }
 
 #index {
@@ -45,61 +49,88 @@ footer {
   background-size: cover;
 }
 
-/* copyed */
+a {
+  color: black;
+}
 
-.sidebar {
+li {
+  color: black;
+}
+
+#logo {
+  width: 100%;
   height: 100%;
-  width: 0;
+  order: 1;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.menu {
+  height: 100vh;
+  width: 20vw;
+  background: #747474;
   position: fixed;
-  z-index: 1;
+  top: 0;
+  left: -200vw;
+  transition: left 0.3s;
+  box-shadow: 10px 0px 21px -10px rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  animation: none;
+}
+
+.fade-layer {
+  position: fixed;
   top: 0;
   left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 5;
 }
 
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+.show {
+  left: 0;
+}
+
+.fade-layer.visible {
   display: block;
-  transition: 0.3s;
 }
 
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.openbtn {
-  font-size: 20px;
+.menu-button {
   cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+  display: inline;
 }
 
-.openbtn:hover {
-  background-color: #444;
+.menu-button i.material-icons {
+  font-size: 2.5rem;
 }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
+@keyframes down {
+  from {
+    top: 0vh;
+  }
+  to {
+    down: 100vh;
+  }
 }
 
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  .menu {
+    width: 80vh;
+  }
+
+  /* .menu {
+    left: 0;
+    transform: translateY(-100vh);
+    animation: down 2s;
+  }
+
+  .show {
+    transform: translateY(0vh)
+  } */
 }
