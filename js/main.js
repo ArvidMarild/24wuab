@@ -11,3 +11,14 @@ function showMenu() {
     let layer = document.querySelector(".fade-layer");
     layer.classList.toggle("visible")
 }
+
+let closeButton = document.getElementById("close-menu");
+closeButton.addEventListener("click", hideMenu);
+
+function hideMenu() {
+    let menu = document.querySelector("nav.menu");
+    menu.classList.remove("show");
+
+    let layer = document.querySelector(".fade-layer");
+    layer.classList.remove("visible");
+}
