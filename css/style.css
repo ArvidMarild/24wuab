@@ -22,9 +22,20 @@
 
 #wrapper-galaries {
   display: grid;
-  height: 100vh;
+  height: 250vh;
   grid-template-columns: 100%;
-  grid-template-rows: 10% 80% 10%;
+  grid-template-rows: 5% 90% 5%;
+  grid-template-areas:
+    "hd"
+    "mn"
+    "ft";
+}
+
+#wrapper-dana {
+  display: grid;
+  height: 250vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 5% 90% 5%;
   grid-template-areas:
     "hd"
     "mn"
@@ -39,6 +50,14 @@
 @font-face {
   font-family: able;
   src: url(abel-regular.ttf);
+}
+
+body {
+  margin: 0px;
+}
+
+#dana {
+  background-color: #333;
 }
 
 header {
@@ -67,23 +86,62 @@ header p {
   font-size: 18px;
 }
 
-#login-main {
+main {
   grid-area: mn;
-  background-color: rgb(39, 39, 39);
   display: flex;
   justify-content: center;
 }
 
+#login-main {
+  background-color: rgb(39, 39, 39);
+}
+
 #logo-link {
-  display: flex;
   order: 1;
 }
 
 .img-right {
   object-fit: contain;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  width: 80%;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+a {
+  text-align: center;
+}
+
+.img-right:hover {
+  width: 90%;
+}
+
+.paintings {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  flex-direction: column;
+  width: 80%; /* Add a fixed width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.paintings h2 {
+  color: #ffffff;
+  font-family: Morden;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.paintings h3 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.paintings h4 {
+  color: #ffffff;
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -91,7 +149,6 @@ footer {
 }
 
 #index {
-  margin: 0px;
   background-image: url("bubble.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,6 +157,7 @@ footer {
 #myVideo {
   width: 100%;
   height: 100%;
+  align-self: center;
 }
 
 #galaries {
@@ -109,8 +167,6 @@ footer {
 #login {
   background-color: black;
 }
-
-/* copy */
 
 .login-forum {
   width: 420px;
@@ -198,8 +254,6 @@ footer {
   text-decoration: underline;
 }
 
-/* copy */
-
 ul a {
   color: black;
   font-size: 30px;
@@ -218,14 +272,6 @@ li {
 }
 
 #logo {
-  order: 1;
-  width: 80%; /* Adjust the width as needed */
-  max-width: 200px; /* Set a maximum width if necessary */
-  height: auto; /* Allow the height to adjust proportionally */
-}
-
-#weird-logo {
-  padding-left: 25px;
   order: 1;
   width: 80%; /* Adjust the width as needed */
   max-width: 200px; /* Set a maximum width if necessary */
@@ -288,11 +334,12 @@ li {
   transition-duration: 0.4s;
   cursor: pointer;
   font-size: 35px;
+  color: black;
 }
 
 #small-logo {
-  margin-top: 85vh;
-  margin-right: 70px;
+  margin-top: 75vh;
+  margin-right: 78px;
   width: 20%;
   height: 20%;
   object-fit: contain;
@@ -320,12 +367,20 @@ li {
     margin: 10px;
   }
 
-  
+  #myVideo {
+    width: 80%;
+    height: 70%;
+    object-fit: fill;
+  }
 }
 
 @media screen and (max-width: 830px) and (min-width: 600px) {
   .menu {
     width: 40%;
+  }
+
+  #myVideo {
+    width: 80%;
   }
 }
 
