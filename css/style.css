@@ -22,7 +22,7 @@
 
 #wrapper-galaries {
   display: grid;
-  height: 250vh;
+  height: 280vh;
   grid-template-columns: 100%;
   grid-template-rows: 5% 90% 5%;
   grid-template-areas:
@@ -109,6 +109,7 @@ main {
 
 a {
   text-align: center;
+  text-decoration: none;
 }
 
 .img-right:hover {
@@ -122,10 +123,10 @@ a {
   flex-direction: column;
   width: 80%; /* Add a fixed width */
   margin: 0 auto; /* Center the container horizontally */
+  color: #ffffff;
 }
 
 .paintings h2 {
-  color: #ffffff;
   font-family: Morden;
   font-size: 40px;
   margin-top: 10px;
@@ -133,15 +134,38 @@ a {
 }
 
 .paintings h3 {
-  color: #ffffff;
   margin-top: 0;
 }
 
 .paintings h4 {
-  color: #ffffff;
   font-size: 40px;
   margin: 0;
   margin-bottom: 20px;
+}
+
+.paintings a {
+  color: #ffffff;
+}
+
+.paintings a:hover {
+  text-decoration: underline;
+}
+
+#galaries p {
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-right: 20px;
+}
+
+#main-galaries {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+  justify-content: space-between;
 }
 
 footer {
@@ -372,6 +396,10 @@ li {
     height: 70%;
     object-fit: fill;
   }
+
+  #description {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 830px) and (min-width: 600px) {
@@ -390,6 +418,22 @@ li {
   }
 
   #small-logo {
+    display: none;
+  }
+
+  .paintings {
+    align-items: flex-start;
+  }
+
+  .paintings a {
+    text-align: start;
+  }
+
+  #wrapper-galaries {
+    height: 280vh;
+  }
+
+  .read-more {
     display: none;
   }
 }
