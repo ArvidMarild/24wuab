@@ -22,7 +22,7 @@
 
 #wrapper-galaries {
   display: grid;
-  height: 280vh;
+  height: 270vh;
   grid-template-columns: 100%;
   grid-template-rows: 5% 90% 5%;
   grid-template-areas:
@@ -63,20 +63,9 @@ body {
 header {
   display: flex;
   align-items: center;
-}
-
-#wrapper header {
   justify-content: space-between;
   grid-area: hd;
   color: #e7f1f0;
-}
-
-#wrapper-login header {
-  justify-content: center;
-}
-
-#wrapper-galaries header {
-  justify-content: space-between;
 }
 
 header p {
@@ -100,7 +89,7 @@ main {
   order: 1;
 }
 
-.img-right {
+.img-left {
   object-fit: contain;
   width: 80%;
   transition: 0.5s;
@@ -112,7 +101,7 @@ a {
   text-decoration: none;
 }
 
-.img-right:hover {
+.img-left:hover {
   width: 90%;
 }
 
@@ -124,6 +113,7 @@ a {
   width: 80%; /* Add a fixed width */
   margin: 0 auto; /* Center the container horizontally */
   color: #ffffff;
+  padding-bottom: 15px;
 }
 
 .paintings h2 {
@@ -164,8 +154,8 @@ a {
 .column {
   display: flex;
   flex-direction: column;
-  flex: 50%;
   justify-content: space-between;
+  flex: 1; /* Change flex to 1 to occupy available space */
 }
 
 footer {
@@ -183,6 +173,15 @@ footer {
   height: 100%;
   align-self: center;
 }
+
+#dana_video {
+  width: 100%;
+  height: min-content;
+  align-self: flex-start;
+  position: absolute;
+}
+
+
 
 #galaries {
   background-color: #333;
@@ -400,6 +399,10 @@ li {
   #description {
     display: none;
   }
+
+  .column {
+    justify-content: unset;
+  }
 }
 
 @media screen and (max-width: 830px) and (min-width: 600px) {
@@ -430,10 +433,18 @@ li {
   }
 
   #wrapper-galaries {
-    height: 280vh;
+    height: 240vh;
   }
 
   .read-more {
     display: none;
+  }
+
+  .img-left {
+    width: 50%;
+  }
+
+  .img-left:hover{
+    width: 60%;
   }
 }
