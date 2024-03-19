@@ -1,6 +1,7 @@
 #wrapper {
   display: grid;
   height: 100vh;
+  overflow: hidden;
   grid-template-columns: 100%;
   grid-template-rows: 15% 75% 10%;
   grid-template-areas:
@@ -22,7 +23,7 @@
 
 #wrapper-galaries {
   display: grid;
-  height: 270vh;
+  height: 225vh;
   grid-template-columns: 100%;
   grid-template-rows: 5% 90% 5%;
   grid-template-areas:
@@ -57,7 +58,7 @@ body {
 }
 
 #dana {
-  background-color: #333;
+  background-color: #fbf9f7;
 }
 
 header {
@@ -65,14 +66,18 @@ header {
   align-items: center;
   justify-content: space-between;
   grid-area: hd;
-  color: #e7f1f0;
+}
+
+#wrapper header {
+  background-color: #fbf9f7;
+  border-bottom: black solid;
 }
 
 header p {
-  order: 2;
   font-family: able;
   margin-right: 30px;
   font-size: 18px;
+  color: black;
 }
 
 main {
@@ -148,6 +153,10 @@ a {
   margin-right: 20px;
 }
 
+#galaries .menu-button i.material-icons {
+  color: #ffffff;
+}
+
 #main-galaries {
   display: flex;
 }
@@ -160,10 +169,23 @@ a {
 
 footer {
   grid-area: ft;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer div img {
+  height: 50%;
+  width: 100%;
+  object-fit: contain;
+}
+
+footer div a {
+  color: black;
+  font-family: Morden;
 }
 
 #index {
-  background-image: url("bubble.jpg");
+  background-image: url("../img/elizabeth-lies-T9Gsevu_N8Y-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -181,7 +203,19 @@ footer {
   position: absolute;
 }
 
+#dana_img {
+  width: 100%;
+  align-self: flex-start;
+  object-fit: contain;
+}
 
+#dana h1 {
+  z-index: 1;
+  color: #ffffff;
+  font-size: 4rem;
+  margin-top: 32vh;
+  height: min-content;
+}
 
 #galaries {
   background-color: #333;
@@ -344,6 +378,7 @@ li {
 
 .menu-button i.material-icons {
   font-size: 2.5rem;
+  color: black;
 }
 
 #close-menu {
@@ -403,6 +438,14 @@ li {
   .column {
     justify-content: unset;
   }
+
+  #dana_video {
+    display: none;
+  }
+
+  #dana h1 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 830px) and (min-width: 600px) {
@@ -444,7 +487,7 @@ li {
     width: 50%;
   }
 
-  .img-left:hover{
+  .img-left:hover {
     width: 60%;
   }
 }
