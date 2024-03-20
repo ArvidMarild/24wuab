@@ -25,7 +25,7 @@
   display: grid;
   height: 225vh;
   grid-template-columns: 100%;
-  grid-template-rows: 5% 90% 5%;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "hd"
     "mn"
@@ -51,6 +51,11 @@
 @font-face {
   font-family: able;
   src: url(abel-regular.ttf);
+}
+
+@font-face {
+  font-family: Morden-bold;
+  src: url(static/PlayfairDisplay-Bold.ttf);
 }
 
 body {
@@ -117,7 +122,6 @@ a {
   flex-direction: column;
   width: 80%; /* Add a fixed width */
   margin: 0 auto; /* Center the container horizontally */
-  color: #ffffff;
   padding-bottom: 15px;
 }
 
@@ -147,14 +151,9 @@ a {
 }
 
 #galaries p {
-  color: #ffffff;
   font-size: 20px;
   letter-spacing: 2px;
   margin-right: 20px;
-}
-
-#galaries .menu-button i.material-icons {
-  color: #ffffff;
 }
 
 #main-galaries {
@@ -171,10 +170,13 @@ footer {
   grid-area: ft;
   display: flex;
   justify-content: space-around;
+  background-color: #fbf9f7;
+  align-items: center;
+  border-top: black solid;
 }
 
 footer div img {
-  height: 50%;
+  height: 45px;
   width: 100%;
   object-fit: contain;
 }
@@ -182,6 +184,7 @@ footer div img {
 footer div a {
   color: black;
   font-family: Morden;
+  font-size: 25px;
 }
 
 #index {
@@ -218,7 +221,7 @@ footer div a {
 }
 
 #galaries {
-  background-color: #333;
+  background-color: #fbf9f7;
 }
 
 #login {
