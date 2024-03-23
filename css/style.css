@@ -36,10 +36,11 @@
   display: grid;
   height: 250vh;
   grid-template-columns: 100%;
-  grid-template-rows: 5% 90% 5%;
+  grid-template-rows: 5% 20% 70% 5%;
   grid-template-areas:
     "hd"
     "mn"
+    "at"
     "ft";
 }
 
@@ -60,6 +61,55 @@
 
 body {
   margin: 0px;
+}
+
+article {
+  grid-area: at;
+  font-size: 20px;
+  font-family: able;
+  display: flex;
+  flex-direction: column;
+}
+
+article p {
+  margin-left: 25px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+.read-more-button {
+  border: none;
+  background: none;
+  font-family: able;
+  font-size: 15px;
+}
+
+.read-more-button:hover {
+  text-decoration: underline;
+}
+
+#more {
+  display: none;
+}
+
+#more.show {
+  display: flex;
+  flex-direction: column;
+}
+
+#more button {
+  border: none;
+  background: none;
+  font-family: able;
+  font-size: 15px;
+}
+
+#more button:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
 }
 
 #dana {
@@ -100,6 +150,11 @@ main {
   align-items: center;
 }
 
+#wrapper main img {
+  height: 5vh;
+  object-fit: contain;
+}
+
 #wrapper main h1 {
   font-size: 2.5rem;
   font-family: able;
@@ -114,6 +169,13 @@ main {
 
 #wrapper main a:hover {
   text-decoration: underline;
+}
+
+#myVideo {
+  width: 80vh;
+  height: 50vh;
+  border: #fbf9f7 solid 8px;
+  object-fit: fill;
 }
 
 #login-main {
@@ -219,31 +281,19 @@ footer div a {
   background-size: cover;
 }
 
-#myVideo {
-  width: 80vh;
-  height: 50vh;
-  border:#fbf9f7 solid 8px;
-  object-fit: fill;
-}
-
-#dana_video {
-  width: 100%;
-  height: min-content;
-  align-self: flex-start;
-  position: absolute;
-}
-
 #dana_img {
   width: 100%;
   align-self: flex-start;
   object-fit: contain;
+  position: absolute;
+  border-bottom: black solid 5px;
 }
 
 #dana h1 {
   z-index: 1;
-  color: #ffffff;
-  font-size: 4rem;
-  margin-top: 32vh;
+  color: white;
+  font-size: 3rem;
+  margin-top: 19vh;
   height: min-content;
 }
 
@@ -504,17 +554,9 @@ li {
     justify-content: unset;
   }
 
-  #dana_video {
-    display: none;
-  }
-
-  #dana h1 {
-    display: none;
-  }
-
   #wrapper main {
-    flex-direction: column;
     justify-content: space-evenly;
+    flex-direction: column;
   }
 
   #myVideo {
@@ -529,10 +571,6 @@ li {
 
   #myVideo {
     width: 80%;
-  }
-
-  #wrapper main h1 {
-    display: none;
   }
 }
 
@@ -567,5 +605,13 @@ li {
 
   .img-left:hover {
     width: 60%;
+  }
+
+  #readMore {
+    display: none;
+  }
+
+  #wrapper main h1 {
+    order: 2;
   }
 }
