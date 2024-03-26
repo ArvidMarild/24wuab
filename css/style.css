@@ -619,6 +619,12 @@ li {
   }
 }
 
+@media screen and (min-width: 500px) {
+  #dana_img {
+    width: 75%;
+  }
+}
+
 @media screen and (min-width: 600px) {
   .menu #close-menu {
     display: none;
@@ -658,5 +664,24 @@ li {
 
   #wrapper main h1 {
     order: 2;
+  }
+
+  #dana_img {
+    display: none;
+  }
+
+  #dana h1 {
+    color: black;
+    margin-top: 32.16px;
+  }
+
+  #wrapper-dana main {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  article p {
+    margin-left: 15vw;
+    margin-right: 15vw;
   }
 }
