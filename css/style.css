@@ -46,17 +46,17 @@
 
 @font-face {
   font-family: Morden;
-  src: url(PlayfairDisplay-VariableFont_wght.ttf);
+  src: url(../fonts/PlayfairDisplay-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: able;
-  src: url(abel-regular.ttf);
+  src: url(../fonts/abel-regular.ttf);
 }
 
 @font-face {
   font-family: Morden-bold;
-  src: url(static/PlayfairDisplay-Bold.ttf);
+  src: url(../fonts/static/PlayfairDisplay-Bold.ttf);
 }
 
 body {
