@@ -275,7 +275,7 @@ a {
 }
 
 .paintings a {
-  color: #ffffff;
+  color: black;
 }
 
 .paintings a:hover {
@@ -286,6 +286,7 @@ a {
   font-size: 20px;
   letter-spacing: 2px;
   margin-right: 20px;
+  font-family: able;
 }
 
 #main-galaries {
@@ -533,7 +534,6 @@ li {
 }
 
 .menu .dropdown-btn {
-  padding: 10px;
   text-decoration: none;
   font-size: 30px;
   display: block;
@@ -544,7 +544,7 @@ li {
   cursor: pointer;
   outline: none;
   font-family: "Times New Roman", Times, serif;
-  transition: ease 3s;
+  padding: 0;
 }
 
 .dropdown-container {
@@ -561,15 +561,6 @@ li {
   float: right;
   padding-right: 8px;
   transition: ease 2s;
-}
-
-@keyframes down {
-  from {
-    top: 0vh;
-  }
-  to {
-    down: 100vh;
-  }
 }
 
 @media screen and (max-width: 600px) {
